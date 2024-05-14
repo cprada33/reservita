@@ -1,5 +1,8 @@
 <template>
-  <v-card class="mx-auto" width="300">
+  <v-card
+    class="mx-auto"
+    width="300"
+  >
     <v-list v-model:opened="open">
       <v-list-item
         prepend-icon="mdi-filter-multiple"
@@ -16,8 +19,14 @@
         </template>
 
         <v-list-item>
-          <DatePicker style="width: 180px" :date="time[0]" />
-          <DatePicker style="width: 180px" :date="time[1]" />
+          <DatePicker
+            style="width: 180px"
+            v-model="time[0]"
+          />
+          <DatePicker
+            style="width: 180px"
+            v-model="time[1]"
+          />
         </v-list-item>
       </v-list-group>
 
@@ -52,7 +61,7 @@
 <script>
 export default {
   data: () => ({
-    open: ['Filters'],
+    open: ["Filters"],
     time: [
       new Date().toLocaleString().slice(0, 9),
       new Date().toLocaleString().slice(0, 9),
