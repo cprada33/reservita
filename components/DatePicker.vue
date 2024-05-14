@@ -1,9 +1,10 @@
 <template>
   <v-text-field
-    v-model="date"
+    :date="date"
     style="width: 400px"
     variant="outlined"
     append-inner-icon="mdi-calendar-today"
+    readonly
   >
     <v-menu
       activator="parent"
@@ -16,5 +17,5 @@
 </template>
 
 <script setup>
-let date = null;
+defineProps(['date']);
 </script>

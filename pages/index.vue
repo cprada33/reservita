@@ -1,7 +1,5 @@
 <template>
-  <BookingFilter />
-  <dataProvidersFetchBookings v-slot="{ data, loading }">
-  </dataProvidersFetchBookings>
+  <BannerFilter />
 </template>
 
 <script setup>

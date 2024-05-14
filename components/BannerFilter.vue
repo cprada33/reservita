@@ -1,19 +1,3 @@
-<!-- <template>
-  <div class="d-flex align-center border-lg">
-    <div style="width: 400px" class="d-flex align-center">
-      <span>PERIODO:</span>
-      <DatePicker style="padding: 0 20px" />
-      <DatePicker />
-      <v-date-input label="Date input"></v-date-input>
-    </div>
-    <div>
-      <span>CABAÑA:</span>
-    </div>
-  </div>
-</template>
-
-<style></style> -->
-
 <template>
   <v-card class="mx-auto" width="300">
     <v-list v-model:opened="open">
@@ -32,8 +16,8 @@
         </template>
 
         <v-list-item>
-          <DatePicker style="width: 180px" />
-          <DatePicker style="width: 180px" />
+          <DatePicker style="width: 180px" :date="time[0]" />
+          <DatePicker style="width: 180px" :date="time[1]" />
         </v-list-item>
       </v-list-group>
 
@@ -62,21 +46,16 @@
       </v-list-group>
     </v-list>
   </v-card>
+  {{ time[0] }}
 </template>
 
 <script>
 export default {
   data: () => ({
-    open: ['Users'],
-    admins: [
-      ['Management', 'mdi-account-multiple-outline'],
-      ['Settings', 'mdi-cog-outline'],
-    ],
-    cruds: [
-      ['Create', 'mdi-plus-outline'],
-      ['Read', 'mdi-file-outline'],
-      ['Update', 'mdi-update'],
-      ['Delete', 'mdi-delete'],
+    open: ['Filters'],
+    time: [
+      new Date().toLocaleString().slice(0, 9),
+      new Date().toLocaleString().slice(0, 9),
     ],
   }),
 };
