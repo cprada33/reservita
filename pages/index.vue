@@ -1,5 +1,5 @@
 <template>
-  <BannerFilter />
+  <HomeBanner />
 </template>
 
 <script setup>
